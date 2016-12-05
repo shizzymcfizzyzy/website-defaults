@@ -1,0 +1,96 @@
+/*!
+ * This file is part of website-defaults
+ * Copyright (C) 2016 Eyeo GmbH
+ *
+ * website-defaults is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * website-defaults is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*******************************************************************************
+ * Base styles
+ ******************************************************************************/
+
+html
+{
+  box-sizing: border-box;
+  color: $primary;
+  background-color: $primary-light;
+  font-family: $primary-font;
+  line-height: 1.5;
+}
+
+/* Set default box-sizing (opinionated) */
+
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+/* Remove the margin in all browsers (opinionated). */
+
+body
+{
+  margin: 0px;
+}
+
+/* Add the correct display in IE 9-. */
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main
+{
+  display: block;
+}
+
+/**
+ * Stretch content full-width
+ */
+.full-width
+{
+  display: block;
+  width: 100%;
+  margin: $small-space 0px;
+}
+
+/**
+ * Center content within a (responsive) fixed width
+ */
+.container
+{
+  width: $mobile-width;
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 0px $small-space;
+}
+
+@media(min-width: $tablet-breakpoint)
+{
+  .container
+  {
+    width: $tablet-width;
+  }
+}
+
+@media(min-width: $desktop-breakpoint)
+{
+  .container
+  {
+    width: $desktop-width;
+  }
+}
