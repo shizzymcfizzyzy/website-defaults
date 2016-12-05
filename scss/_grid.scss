@@ -1,0 +1,104 @@
+/*!
+ * This file is part of website-defaults
+ * Copyright (C) 2016 Eyeo GmbH
+ *
+ * website-defaults is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * website-defaults is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*******************************************************************************
+ * Grid component
+ ******************************************************************************/
+
+/**
+ * - .row contains one or more .column(s)
+ * - .row clears .column(s)
+ * - .row negates the left & right padding of it's left-most & right-most
+ *   .column(s) while preserving consistent padding between .column(s)
+ */
+.row
+{
+  margin: 0px (-$small-space);
+}
+
+.row:after
+{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/**
+ * - .column is 100% width by default
+ * - Modifier classes are applied to .column to change it's width
+ * - Modifier classes behave differently on different device widths
+ */
+.column
+{
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 0px $small-space;
+}
+
+/* - .column(s) within .row .reverse appear in reverse order
+ * - .column(s) within [dir=rtl] appear in reverse order respectively
+ */
+
+.column,
+[dir="rtl"] .reverse .column
+{
+  float: left;
+}
+
+.reverse .column,
+[dir="rtl"] .column
+{
+  float: right;
+}
+
+@media(min-width: $tablet-breakpoint)
+{
+  .one-fourth
+  {
+    width: 50%;
+  }
+}
+
+@media(min-width: $desktop-breakpoint)
+{
+  .one-half
+  {
+    width: 50%;
+  }
+
+  .one-third
+  {
+    width: 33.333333%;
+  }
+
+  .two-thirds
+  {
+    width: 66.666667%;
+  }
+
+  .one-fourth
+  {
+    width: 25%;
+  }
+
+  .three-fourths
+  {
+    width: 75%;
+  }
+}

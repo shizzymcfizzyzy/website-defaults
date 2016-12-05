@@ -22,3 +22,52 @@ body
 {
   margin: 3em 0;
 }
+
+/**
+ * Highlight text with inverse colors and padding
+ */
+.inverse-text
+{
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: #000;
+}
+
+/**
+ * Tablet width container
+ */
+.tablet
+{
+  width: 720px;
+}
+
+/**
+ * Mobile width container
+ */
+.mobile
+{
+  width: 540px;
+}
+
+/* Collapse mobile & tablet container widths to 100% on small screens */
+
+.mobile,
+.tablet
+{
+  max-width: 100%;
+}
+
+.mobile .column,
+.tablet .column
+{
+  width: 100%;
+}
+
+@media(min-width: 768px)
+{
+  /* Collapse one fourth columns to one half columns inside tablet containers */
+  .tablet .column.one-fourth
+  {
+    width: 50%;
+  }
+}
