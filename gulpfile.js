@@ -18,25 +18,12 @@
 
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-const connect = require("gulp-connect");
-
-gulp.task("connect", function()
-{
-  connect.server({
-    root: "./demo/"
-  });
-});
 
 gulp.task("scss", function ()
 {
   return gulp.src("./scss/main.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./demo/css/"));
+    .pipe(gulp.dest("./static/css/"));
 });
 
-gulp.task("watch", function ()
-{
-  gulp.watch("scss/*.scss", ["scss"]);
-});
-
-gulp.task("default", ["scss", "connect", "watch"]);
+gulp.task("default", ["scss"]);
