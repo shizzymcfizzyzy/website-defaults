@@ -13,64 +13,29 @@ title=Grid
 </ol>
 
 <h2 id="desktop">Desktop</h2>
-<div class="row">
-  <div class="one-half column"><p class="inverse-text">One half</p></div>
-  <div class="one-half column"><p class="inverse-text">One half</p></div>
-</div>
-<div class="row">
-  <div class="one-third column"><p class="inverse-text">One third</p></div>
-  <div class="two-thirds column"><p class="inverse-text">Two thirds</p></div>
-</div>
-<div class="row">
-  <div class="one-fourth column"><p class="inverse-text">One fourth</p></div>
-  <div class="three-fourths column"><p class="inverse-text">Three fourths</p></div>
-</div>
+<? include styleguide/grid/all-column-widths ?>
 
 <h2 id="tablet">Tablet</h2>
 <div class="tablet">
-  <div class="row">
-    <div class="one-half column"><p class="inverse-text">One half</p></div>
-  </div>
-  <div class="row">
-    <div class="one-third column"><p class="inverse-text">One third</p></div>
-  </div>
-  <div class="row">
-    <div class="one-fourth column"><p class="inverse-text">One fourth</p></div>
-    <div class="one-fourth column"><p class="inverse-text">One fourth</p></div>
-  </div>
+  <? include styleguide/grid/all-column-widths ?>
 </div>
 
 <h2 id="mobile">Mobile</h2>
 <div class="mobile">
-  <div class="row">
-    <div class="one-half column"><p class="inverse-text">One half</p></div>
-  </div>
-  <div class="row">
-    <div class="one-third column"><p class="inverse-text">One third</p></div>
-  </div>
-  <div class="row">
-    <div class="one-fourth column"><p class="inverse-text">One fourth</p></div>
-  </div>
+  <? include styleguide/grid/all-column-widths ?>
 </div>
 
 <h2 id="reverse">Reverse</h2>
-<div class="row reverse">
-  <div class="one-half column"><p class="inverse-text">First</p></div>
-  <div class="one-half column"><p class="inverse-text">Second</p></div>
+<div class="reverse">
+  <? include styleguide/grid/2-column ?>
 </div>
 
 <h2 id="right-to-left">Right-to-left</h2>
 <div dir="rtl">
-  <div class="row">
-    <div class="one-half column"><p class="inverse-text">First</p></div>
-    <div class="one-half column"><p class="inverse-text">Second</p></div>
-  </div>
+  <? include styleguide/grid/2-column ?>
 </div>
 
 <h2 id="reverse-and-right-to-left">Reverse & right-to-left</h2>
-<div dir="rtl">
-  <div class="row reverse">
-    <div class="one-half column"><p class="inverse-text">First</p></div>
-    <div class="one-half column"><p class="inverse-text">Second</p></div>
-  </div>
+<div class="reverse" dir="rtl">
+  <? include styleguide/grid/2-column ?>
 </div>
