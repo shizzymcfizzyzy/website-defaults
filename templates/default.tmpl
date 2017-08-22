@@ -3,7 +3,7 @@
   lang="{{ locale }}"
   dir="{{ "rtl" if config.has_option("rtl", locale) else "ltr" }}">
   <head>
-    <title>{{ title | translate("page-title", "Meta page title") }}</title>
+    <? include meta/standard ?>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/demo.css">
   </head>

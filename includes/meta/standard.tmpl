@@ -5,3 +5,4 @@
 {% if description %}
   <meta name="description" content="{{ description | translate("page-description", "Page description") }}">
 {% endif %}
+<link rel="canonical" href="{{ get_canonical_url(page) }}">
