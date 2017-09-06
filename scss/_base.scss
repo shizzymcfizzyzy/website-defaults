@@ -22,40 +22,10 @@
 
 html
 {
-  box-sizing: border-box;
   color: $primary;
   background-color: $primary-light;
   font-family: $primary-font;
   line-height: 1.5;
-}
-
-/* Set default box-sizing (opinionated) */
-
-*,
-*:before,
-*:after
-{
-  box-sizing: inherit;
-}
-
-/* Remove the margin in all browsers (opinionated). */
-
-body
-{
-  margin: 0px;
-}
-
-/* Add the correct display in IE 9-. */
-
-article,
-aside,
-footer,
-header,
-nav,
-section,
-main
-{
-  display: block;
 }
 
 /**

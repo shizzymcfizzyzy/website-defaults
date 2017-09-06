@@ -1,0 +1,136 @@
+/*!
+ * This file is part of website-defaults
+ * Copyright (C) 2016-present eyeo GmbH
+ *
+ * website-defaults is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * website-defaults is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*******************************************************************************
+ * CSS Reset
+ ******************************************************************************/
+
+/* Reset margins, paddings, and font globally */
+
+// General
+html, body,
+
+// Typography
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong, sub, sup,
+strike, s, mark, del, ins,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+kbd, samp, var, output, ruby,
+
+// Lists
+ol, ul, li, dl, dt, dd,
+
+// Layout
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+
+// Media
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, object, iframe, embed,
+details, summary,
+
+// Forms
+fieldset, form, label, legend,
+
+// Tables
+table, caption,
+tbody, tfoot, thead,
+tr, th, td
+{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Add the correct display in IE 9-. */
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main
+{
+  display: block;
+}
+
+/* Set default box-sizing (opinionated) */
+
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+html
+{
+  box-sizing: border-box;
+}
+
+/* Remove the margin in all browsers (opinionated). */
+
+body
+{
+  margin: 0px;
+}
+
+/* Remove list styles (opinionated) */
+
+ol,
+ul
+{
+  list-style: none;
+}
+
+/* Remove quotes ("") in most browsers (opinionated) */
+
+blockquote,
+q
+{
+  quotes: none;
+}
+
+/* Remove quotes ("") in Safari (opinionated) */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+  content: "";
+  content: none;
+}
+
+/* Share borders between adjacent cells (opinionated) */
+
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
