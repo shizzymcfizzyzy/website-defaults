@@ -80,12 +80,15 @@ $small-space: 1em !default;
 /* Breakpoints
  ******************************************************************************/
 
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 992px;
+$phone-breakpoint: 320px !default;
+$phablet-breakpoint: 576px !default;
+$tablet-breakpoint: 768px !default;
+$desktop-breakpoint: 992px !default;
 
 /* Container widths
  ******************************************************************************/
 
-$mobile-width: 540px !default;
+$phone-width: auto !default;
+$phablet-width: 540px !default;
 $tablet-width: 720px !default;
 $desktop-width: 960px !default;
