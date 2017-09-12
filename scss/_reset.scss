@@ -134,3 +134,55 @@ table
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Normalize inline content (opinionated) */
+
+b,
+strong
+{
+  font-weight: $bold-weight;
+}
+
+small
+{
+  font-size: $small-font;
+}
+
+abbr
+{
+  text-decoration: underline;
+  cursor: help;
+}
+
+sup
+{
+  position: relative;
+  font-size: 75%;
+  vertical-align: super;
+}
+
+a,
+a:visited
+{
+  color: inherit;
+  /* Remove the gray background on active links in IE 10. */
+  background-color: transparent;
+  text-decoration: none;
+  /* Set default pointer regardless of href (opinionated) */
+  cursor: pointer;
+}
+
+a:hover,
+a:active,
+a:focus
+{
+  text-decoration: underline;
+}
+
+img
+{
+  /* Make fixed width images responsive */
+  max-width: 100%;
+  /* Remove the border on images inside links in IE 10-. */
+  border-style: none;
+}

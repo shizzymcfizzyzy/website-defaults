@@ -24,175 +24,145 @@
  * 3. Body content
  ******************************************************************************/
 
-/* Document
- ******************************************************************************/
-
-p,
-ol,
-ul,
-dl,
-pre,
-blockquote
+.content
 {
-  /* Set consistent margins (opinionated) */
-  margin: 1em 0em;
-}
 
-/* Headings
- ******************************************************************************/
+  /* Document
+  ****************************************************************************/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-  /* Margin on top **only** (opinionated) */
-  margin: 2em 0em 0.5em 0em;
-}
+  p,
+  ol,
+  ul,
+  dl,
+  pre,
+  blockquote
+  {
+    /* Set consistent margins (opinionated) */
+    margin: 1em 0em;
+  }
 
-h1
-{
-  font-size: 2em;
-}
+  /* Headings
+  ****************************************************************************/
 
-h2
-{
-  font-size: 1.5em;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+    /* Margin on top **only** (opinionated) */
+    margin: 2em 0em 0.5em 0em;
+  }
 
-h3
-{
-  font-size: 1.25em;
-}
+  h1
+  {
+    font-size: 2em;
+  }
 
-h4
-{
-  font-size: 1em;
-}
+  h2
+  {
+    font-size: 1.5em;
+  }
 
-h5
-{
-  font-size: 0.8em;
-}
+  h3
+  {
+    font-size: 1.25em;
+  }
 
-h6
-{
-  font-size: 0.7em;
-}
+  h4
+  {
+    font-size: 1em;
+  }
 
-/* Body content
- ******************************************************************************/
+  h5
+  {
+    font-size: 0.8em;
+  }
 
-abbr
-{
-  text-decoration: underline;
-  cursor: help;
-}
+  h6
+  {
+    font-size: 0.7em;
+  }
 
-b,
-strong
-{
-  font-weight: $bold-weight;
-}
+  /* Body content
+  ****************************************************************************/
 
-small
-{
-  font-size: $small-font;
-}
+  a,
+  a:visited
+  {
+    color: $accent;
+  }
 
-sup
-{
-  position: relative;
-  font-size: 75%;
-  vertical-align: super;
-}
+  hr
+  {
+    border: 1px solid $secondary-light;
+  }
 
-a,
-a:visited
-{
-  color: $accent;
-  /* Remove the gray background on active links in IE 10. */
-  background-color: transparent;
-  text-decoration: none;
-  /* Set default pointer regardless of href (opinionated) */
-  cursor: pointer;
-}
+  blockquote
+  {
+    padding-left: 1em;
+    border-left: 5px solid $secondary;
+  }
 
-a:hover,
-a:active,
-a:focus
-{
-  text-decoration: underline;
-}
+  [dir="rtl"] blockquote
+  {
+    padding-right: 1em;
+    padding-left: 0em;
+    border-right: 5px solid $secondary-light;
+    border-left: 0px;
+  }
 
-img
-{
-  /* Make fixed width images responsive */
-  max-width: 100%;
-  /* Remove the border on images inside links in IE 10-. */
-  border-style: none;
-}
+  ol,
+  ul
+  {
+    padding-left: 1.5em;
+  }
 
-hr
-{
-  border: 1px solid $secondary-light;
-}
+  [dir="rtl"] ol,
+  [dir="rtl"] ul
+  {
+    padding-right: 2em;
+    padding-left: 0em;
+  }
 
-blockquote
-{
-  padding-left: 1em;
-  border-left: 5px solid $secondary;
-}
+  ol
+  {
+    list-style: decimal;
+  }
 
-[dir="rtl"] blockquote
-{
-  padding-right: 1em;
-  padding-left: 0em;
-  border-right: 5px solid $secondary-light;
-  border-left: 0px;
-}
+  ul
+  {
+    list-style: disc;
+  }
 
-ol,
-ul
-{
-  padding-left: 1.5em;
-}
+  li
+  {
+    margin: 0.25em 0em;
+  }
 
-[dir="rtl"] ol,
-[dir="rtl"] ul
-{
-  padding-right: 2em;
-  padding-left: 0em;
-}
+  ol ol,
+  ul ul,
+  ol ul,
+  ul ol
+  {
+    /* prevent double spacing lists */
+    margin: 0em;
+  }
 
-li
-{
-  margin: 0.25em 0em;
-}
+  ol ol
+  {
+    list-style-type: lower-alpha;
+  }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol
-{
-  /* prevent double spacing lists */
-  margin: 0em;
-}
+  dt
+  {
+    /* undo browser default (opinionated)*/
+    font-weight: $bold-weight;
+  }
 
-ol ol
-{
-  list-style-type: lower-alpha;
-}
-
-dt
-{
-  /* undo browser default (opinionated)*/
-  font-weight: $bold-weight;
-}
-
-dd
-{
-  margin: 0.25em 0em 1em 0em;
+  dd
+  {
+    margin: 0.25em 0em 1em 0em;
+  }
 }
