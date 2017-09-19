@@ -1,0 +1,73 @@
+/*!
+ * This file is part of website-defaults
+ * Copyright (C) 2016-2017 eyeo GmbH
+ *
+ * website-defaults is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * website-defaults is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*******************************************************************************
+ * Buttons
+ *******************************************************************************
+ * 1. Reset
+ ******************************************************************************/
+
+/* 1. Reset
+ ******************************************************************************/
+
+button
+{
+  margin: 0px;
+  font: inherit;
+
+  /* Show the overflow in IE and Edge */
+  overflow: visible;
+
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"]
+{
+  -webkit-appearance: button;
+}
+
+/* Remove the inner border and padding in Firefox. */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+{
+  padding: 0px;
+  border-style: none;
+}
+
+/* Restore the focus styles unset by the previous rule. */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+{
+  outline: 1px dotted ButtonText;
+}

@@ -1,0 +1,54 @@
+/*!
+ * This file is part of website-defaults
+ * Copyright (C) 2016-2017 eyeo GmbH
+ *
+ * website-defaults is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * website-defaults is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*******************************************************************************
+ * Adanced forms fields
+ *******************************************************************************
+ * 1. Reset
+ ******************************************************************************/
+
+/* 1. Reset
+ ******************************************************************************/
+
+/* Correct the cursor style of increment and decrement buttons in Chrome. */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button
+{
+  height: auto;
+}
+
+/* Use `-webkit-appearance: none` to reset inputs in iOS Safari */
+
+[type="date"],
+[type="time"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="search"],
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration
+{
+  -webkit-appearance: none;
+}
+
+[type="search"]
+{
+  outline-offset: -2px;
+}
