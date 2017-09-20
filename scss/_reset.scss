@@ -186,3 +186,10 @@ img
   /* Remove the border on images inside links in IE 10-. */
   border-style: none;
 }
+
+/* Set correct display for hidden attribute in IE 10-  */
+
+[hidden]
+{
+  display: none;
+}
