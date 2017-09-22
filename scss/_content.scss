@@ -53,6 +53,8 @@
   {
     /* Margin on top **only** (opinionated) */
     margin: 2em 0em 0.5em 0em;
+    /* All headings should be bold (opinionated) */
+    font-weight: $bold-weight;
   }
 
   h1
