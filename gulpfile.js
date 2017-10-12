@@ -21,14 +21,14 @@ const sass = require("gulp-sass");
 
 gulp.task("scss", function ()
 {
-  return gulp.src("./scss/main.scss")
+  return gulp.src("./static/scss/main.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./static/css/"));
 });
 
 gulp.task("watch", function ()
 {
-  gulp.watch("./scss/**/*.scss", ["scss"]);
+  gulp.watch("./static/scss/**/*.scss", ["scss"]);
 });
 
 gulp.task("default", ["scss", "watch"]);
