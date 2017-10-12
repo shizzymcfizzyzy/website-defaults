@@ -64,3 +64,11 @@ html
     width: $desktop-width;
   }
 }
+
+@media(min-width: $large-desktop-breakpoint)
+{
+  .container
+  {
+    width: $large-desktop-width;
+  }
+}

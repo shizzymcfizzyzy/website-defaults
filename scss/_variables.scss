@@ -84,6 +84,7 @@ $phone-breakpoint: 320px !default;
 $phablet-breakpoint: 576px !default;
 $tablet-breakpoint: 768px !default;
 $desktop-breakpoint: 992px !default;
+$large-desktop-breakpoint: 1200px !default;
 
 /* Container widths
  ******************************************************************************/
@@ -92,3 +93,4 @@ $phone-width: auto !default;
 $phablet-width: 540px !default;
 $tablet-width: 720px !default;
 $desktop-width: 960px !default;
+$large-desktop-width: 1140px !default;
