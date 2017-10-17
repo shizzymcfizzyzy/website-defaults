@@ -70,3 +70,15 @@ html
     width: $large-desktop-width;
   }
 }
+
+.clearfix:after,
+.clearfix:before
+{
+  display: table;
+  content: " ";
+}
+
+.clearfix:after
+{
+  clear: both;
+}
