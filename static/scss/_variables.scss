@@ -78,11 +78,19 @@ $small-space: 1em !default;
 // Breakpoints
 ////////////////////////////////////////////////////////////////////////////////
 
+// Device breakpoints
+
 $phone-breakpoint: 320px !default;
 $phablet-breakpoint: 576px !default;
 $tablet-breakpoint: 768px !default;
 $desktop-breakpoint: 992px !default;
 $large-desktop-breakpoint: 1200px !default;
+
+// Grid breakpoints
+
+$half-breakpoint: $tablet-breakpoint !default;
+$third-breakpoint: $desktop-breakpoint !default;
+$fourth-breakpoint: $desktop-breakpoint !default;
 
 // Container widths
 ////////////////////////////////////////////////////////////////////////////////
