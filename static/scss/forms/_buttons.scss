@@ -29,6 +29,9 @@ button
   /* Show the overflow in IE and Edge */
   overflow: visible;
 
+  /* Remove rounded corners in Chrome 62+ */
+  border-radius: 0;
+
   /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
   text-transform: none;
 }
