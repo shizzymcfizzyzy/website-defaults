@@ -92,7 +92,7 @@ $half-breakpoint: $tablet-breakpoint !default;
 $third-breakpoint: $desktop-breakpoint !default;
 $fourth-breakpoint: $desktop-breakpoint !default;
 
-// Container widths
+// Device widths
 ////////////////////////////////////////////////////////////////////////////////
 
 $phone-width: auto !default;
@@ -100,3 +100,8 @@ $phablet-width: 540px !default;
 $tablet-width: 720px !default;
 $desktop-width: 960px !default;
 $large-desktop-width: 1140px !default;
+
+// Component widths
+////////////////////////////////////////////////////////////////////////////////
+
+$container-width: $large-desktop-width !default;

@@ -31,33 +31,10 @@ html
  */
 .container
 {
-  width: $phone-width;
+  width: $container-width;
   max-width: 100%;
-  margin: 0px auto;
-  padding: 0px $small-space;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $small-space;
+  padding-left: $small-space;
 }
-
-@media(min-width: $tablet-breakpoint)
-{
-  .container
-  {
-    width: $tablet-width;
-  }
-}
-
-@media(min-width: $desktop-breakpoint)
-{
-  .container
-  {
-    width: $desktop-width;
-  }
-}
-
-@media(min-width: $large-desktop-breakpoint)
-{
-  .container
-  {
-    width: $large-desktop-width;
-  }
-}
-
