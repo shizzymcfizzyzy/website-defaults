@@ -25,16 +25,3 @@ html
   font-family: $primary-font;
   line-height: 1.5;
 }
-
-/**
- * Center content within a (responsive) fixed width
- */
-.container
-{
-  width: $container-width;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $small-space;
-  padding-left: $small-space;
-}

@@ -18,19 +18,43 @@
  * Utilities
  ******************************************************************************/
 
+/* Responsive widths
+ ******************************************************************************/
+
 /**
- * Stretch content full-width
+ * Stretch content (e.g. images) full-width
  */
 .full-width
 {
   display: block;
   width: 100%;
-  margin: $small-space 0px;
 }
 
 /**
- * Clearfix content
+ * Center content within a (responsive) fixed width
  */
+.container
+{
+  width: $container-width;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $small-space;
+  padding-left: $small-space;
+}
+
+/* Device widths
+ ******************************************************************************/
+
+.phone-width { width: $phone-width; }
+.phablet-width { width: $phablet-width; }
+.tablet-width { width: $tablet-width; }
+.desktop-width { width: $desktop-width; }
+.large-desktop-width { width: $large-desktop-width; }
+
+/* Clearfix
+ ******************************************************************************/
+
 .clearfix:after,
 .clearfix:before
 {
