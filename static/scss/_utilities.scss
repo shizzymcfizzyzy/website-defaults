@@ -66,3 +66,30 @@
 {
   clear: both;
 }
+
+/* Backgrounds
+ ******************************************************************************/
+
+.bg-primary
+{
+  color: $primary-light;
+  background-color: $primary-dark;
+}
+
+.bg-secondary
+{
+  color: $secondary-light;
+  background-color: $secondary-dark;
+}
+
+.bg-accent
+{
+  color: $accent-light;
+  background-color: $accent-dark;
+}
+
+.bg-error
+{
+  color: $error-light;
+  background-color: $error-dark;
+}
