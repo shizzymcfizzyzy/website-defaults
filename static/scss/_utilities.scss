@@ -52,6 +52,17 @@
 .desktop-width { width: $desktop-width; }
 .large-desktop-width { width: $large-desktop-width; }
 
+/* Text alignment
+ ******************************************************************************/
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-start { text-align: left; }
+[dir="rtl"] .text-start { text-align: right; }
+.text-end { text-align: right; }
+[dir="rtl"] .text-end { text-align: left; }
+
 /* Clearfix
  ******************************************************************************/
 
@@ -65,6 +76,21 @@
 .clearfix:after
 {
   clear: both;
+}
+
+/* Screen reader only
+ ******************************************************************************/
+
+.sr-only
+{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 /* Backgrounds
