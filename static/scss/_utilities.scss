@@ -93,6 +93,24 @@
   border: 0;
 }
 
+/* Unstyled elements
+ ******************************************************************************/
+
+.unstyled,
+.unstyled *,
+.content .unstyled
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+ul.unstyled
+{
+  list-style: none;
+}
+
 /* Backgrounds
  ******************************************************************************/
 
