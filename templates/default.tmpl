@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html
-  lang="{{ locale }}"
-  dir="{{ "rtl" if config.has_option("rtl", locale) else "ltr" }}"
-  class="no-js">
-  <head>
-    <? include meta/standard ?>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/demo.css">
-  </head>
-  <body>
-    <div class="container content">
-      {{ body | safe }}
-    </div>
-    <script src="/js/main.js"></script>
-  </body>
-</html>
+{% extends "templates/minimal" %}
+
+{% block body %}
+  <div class="container content">
+    {{ body | safe }}
+  </div>
+{% endblock %}
