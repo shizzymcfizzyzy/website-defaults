@@ -63,6 +63,14 @@
 .text-end { text-align: right; }
 [dir="rtl"] .text-end { text-align: left; }
 
+/* Floats
+ ******************************************************************************/
+
+ .float-start { float: left; }
+ [dir="rtl"] .float-start { float: right; }
+ .float-end { float: right; }
+ [dir="rtl"] .float-end { float: left; }
+
 /* Clearfix
  ******************************************************************************/
 
