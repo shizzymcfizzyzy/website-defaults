@@ -1,7 +1,13 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% if title_exclude_sitename or not has_string("name", "site") %}
 <title>{{ title | translate("page-title", "Page title") }}</title>
+{% else %}
+<title>{{ title | translate("page-title", "Page title") }} | {{ get_string("name", "site") }}</title>
+{% endif %}
+
 {% if description %}
   <meta name="description" content="{{ description | translate("page-description", "Page description") }}">
 {% endif %}
