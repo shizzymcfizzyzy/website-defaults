@@ -2,11 +2,14 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% if title_exclude_sitename or not has_string("name", "site") %}
-<title>{{ title | translate("page-title", "Page title") }}</title>
-{% else %}
-<title>{{ title | translate("page-title", "Page title") }} | {{ get_string("name", "site") }}</title>
-{% endif %}
+<title>
+  {{ title | translate("title", "Page title") }}
+  {% if title_suffix and title_suffix != 'none' %}
+    | {{ title_suffix | translate("title-suffix", "Page title suffix") }}
+  {% elif has_string("name", "site") and title_suffix != 'none' %}
+    | {{ get_string("name", "site") }}
+  {% endif %}
+</title>
 
 {% if description %}
   <meta name="description" content="{{ description | translate("page-description", "Page description") }}">
