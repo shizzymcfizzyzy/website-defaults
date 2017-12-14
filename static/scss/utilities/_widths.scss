@@ -1,0 +1,37 @@
+// This file is part of website-defaults
+// Copyright (C) 2016-present eyeo GmbH
+//
+// website-defaults is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// website-defaults is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+
+/** Force full-width  */
+.full-width
+{
+  display: block;
+  width: 100%;
+}
+
+/** Fix a block to the width of a phone */
+.phone-width { width: $phone-width; }
+
+/** Fix a block to the width of a phablet */
+.phablet-width { width: $phablet-width; }
+
+/** Fix a block to the width of a tablet */
+.tablet-width { width: $tablet-width; }
+
+/** Fix a block to the width of a desktop */
+.desktop-width { width: $desktop-width; }
+
+/** Fix a block to the width of a large desktop */
+.large-desktop-width { width: $large-desktop-width; }

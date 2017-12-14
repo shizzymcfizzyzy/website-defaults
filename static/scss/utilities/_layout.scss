@@ -1,0 +1,50 @@
+// This file is part of website-defaults
+// Copyright (C) 2016-present eyeo GmbH
+//
+// website-defaults is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// website-defaults is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with website-defaults.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Center within a responsive fixed width
+ * Use modifier classes defined in _width.scss to change said fixed width
+ */
+.container
+{
+  width: $container-width;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $small-space;
+  padding-left: $small-space;
+}
+
+/** Clear without collapsed margin */
+.clearfix:after,
+.clearfix:before
+{
+  display: table;
+  content: " ";
+}
+
+.clearfix:after
+{
+  clear: both;
+}
+
+/** Align a block to the start of a line */
+.float-start { float: left; }
+[dir="rtl"] .float-start { float: right; }
+
+/** Align a block to the end of a line */
+.float-end { float: right; }
+[dir="rtl"] .float-end { float: left; }
