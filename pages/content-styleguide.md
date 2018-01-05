@@ -1,4 +1,5 @@
 title=Content Styleguide
+description=A guide to writing content for eyeo websites
 
 # Content Styleguide
 
