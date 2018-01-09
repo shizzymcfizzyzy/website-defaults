@@ -97,7 +97,15 @@ $tablet-width: 720px !default;
 $desktop-width: 960px !default;
 $large-desktop-width: 1140px !default;
 
-// Component widths
+// Component sizes
 ////////////////////////////////////////////////////////////////////////////////
 
+// Container
+
 $container-width: $large-desktop-width !default;
+
+// Navbar
+
+$navbar-branding-height: $medium-space !default;
+$navbar-padding: $small-space !default;
+$add-horizontal-navbar-padding: true !default;

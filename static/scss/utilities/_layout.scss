@@ -18,14 +18,19 @@
  * Center within a responsive fixed width
  * Use modifier classes defined in _width.scss to change said fixed width
  */
-.container
-{
-  width: $container-width;
+ @mixin container($width: $container-width, $padding-x: $small-space)
+ {
+  width: $width;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $small-space;
-  padding-left: $small-space;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+}
+
+.container
+{
+  @include container;
 }
 
 /** Clear without collapsed margin */

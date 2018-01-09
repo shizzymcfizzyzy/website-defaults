@@ -1,0 +1,174 @@
+// This file is part of help.eyeo.com.
+// Copyright (C) 2017 Eyeo GmbH
+//
+// help.eyeo.com is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// help.eyeo.com is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with help.eyeo.com.  If not, see <http://www.gnu.org/licenses/>.
+
+/*******************************************************************************
+ * Navbar component
+ ******************************************************************************/
+
+.navbar
+{
+  @extend .clearfix;
+}
+
+/* .navbar .navbar-container
+ ****************************************************************************/
+
+.navbar-container
+{
+  @if ($add-horizontal-navbar-padding)
+  {
+    @extend .container;
+  }
+  @else
+  {
+    @include container($container-width, 0px);
+  }
+}
+
+/* .navbar .navbar-branding
+ ****************************************************************************/
+
+.navbar-branding
+{
+  padding-top: $navbar-padding + ($navbar-padding / 4);
+  padding-bottom: $navbar-padding + ($navbar-padding / 4);
+  line-height: 1;
+
+  @if ($add-horizontal-navbar-padding != true)
+  {
+    padding-right: $navbar-padding;
+    padding-left: $navbar-padding;
+  }
+}
+
+.navbar-branding img
+{
+  height: $navbar-branding-height;
+  vertical-align: text-top;
+}
+
+/* .navbar .toggle-navbar-collapse
+ ****************************************************************************/
+
+.toggle-navbar-collapse
+{
+  display: none;
+  padding-top: ($navbar-branding-height / 2) + ($navbar-padding / 2);
+  padding-bottom: ($navbar-branding-height / 2) + ($navbar-padding / 2);
+
+  @if ($add-horizontal-navbar-padding != true)
+  {
+    padding-right: $navbar-padding;
+    padding-left: $navbar-padding;
+  }
+}
+
+.js .toggle-navbar-collapse
+{
+  display: block;
+
+  @media (min-width: $tablet-breakpoint)
+  {
+    display: none;
+  }
+}
+
+/* .navbar .navbar-collapse
+ ****************************************************************************/
+
+.navbar-collapse
+{
+  clear: both;
+
+  @media (min-width: $tablet-breakpoint)
+  {
+    float: right;
+    clear: none;
+  }
+}
+
+[dir="rtl"] .navbar-collapse
+{
+  float: left;
+}
+
+.js .navbar-collapse
+{
+  display: none;
+
+  @media (min-width: $tablet-breakpoint)
+  {
+    display: block;
+  }
+}
+
+.expanded .navbar-collapse
+{
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-breakpoint)
+  {
+    width: auto;
+  }
+}
+
+/* .navbar .navbar-nav
+ ****************************************************************************/
+
+@if ($add-horizontal-navbar-padding)
+{
+  .navbar .navbar-nav
+  {
+    padding-bottom: $navbar-padding / 2;
+
+    @media (min-width: $tablet-breakpoint)
+    {
+      margin-right: -($navbar-padding / 2);
+      margin-left: -($navbar-padding / 2);
+      padding-bottom: 0;
+    }
+  }
+}
+
+.navbar .navbar-nav li
+{
+  @media (min-width: $tablet-breakpoint)
+  {
+    display: inline-block;
+  }
+}
+
+.navbar .navbar-nav a
+{
+  display: block;
+  padding-top: $navbar-padding / 2;
+  padding-bottom: $navbar-padding / 2;
+
+  @if ($add-horizontal-navbar-padding != true)
+  {
+    padding-right: $navbar-padding;
+    padding-left: $navbar-padding;
+  }
+
+  @media (min-width: $tablet-breakpoint)
+  {
+    padding-top: ($navbar-branding-height / 2) + ($navbar-padding / 2);
+    padding-right: $navbar-padding / 2;
+    padding-bottom: ($navbar-branding-height / 2) + ($navbar-padding / 2);
+    padding-left: $navbar-padding / 2;
+  }
+}
