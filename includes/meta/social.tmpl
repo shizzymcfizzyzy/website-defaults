@@ -1,0 +1,53 @@
+{% from "macros/meta-tag" import meta_tag %}
+
+{% set social_media_meta = [
+  ('og:url',
+    og_url,
+    get_canonical_url(page)),
+  ('og:type',
+    og_type,
+    'website'),
+  ('og:site_name',
+    og_site_name,
+    get_string('name', 'site') if has_string('name', 'site')),
+  ('og:title',
+    og_title | translate('og-title', 'Meta data') if og_title,
+    title | translate('title', 'Meta data') if title),
+  ('og:description',
+    og_description | translate('og-description', 'Meta data') if og_description,
+    description | translate('page-description', 'Meta data') if description),
+  ('og:image',
+    og_image,
+    featured_img_url),
+  ('og:image:alt',
+    og_image_alt,
+    featured_img_alt),
+  ('og:locale',
+    og_locale,
+    locale | to_og_locale),
+
+  ('twitter:site',
+    '@' + twitter_site if twitter_site,
+    '@' + config.get('social', 'twitter') if config.has_option('social', 'twitter') else '@eyeo'),
+  ('twitter:card',
+    twitter_card,
+    'summary_large_image' if og_image or twitter_image or featured_img_url else 'summary'),
+  ('twitter:image',
+    twitter_image,
+    featured_img_url),
+  ('twitter:image:alt',
+    twitter_image_alt,
+    featured_img_alt),
+
+  ('fb:app_id',
+    facebook_id,
+    config.get('social', 'facebook_id') if config.has_option('social', 'facebook_id')),
+
+  ('p:domain_verify',
+    pinterest_id,
+    config.has_option('social', 'pinterest_id') if config.has_option('social', 'pinterest_id')),
+] %}
+
+{% for property, content, defaultContent in social_media_meta %}
+  {{ meta_tag(property, content, defaultContent) }}
+{% endfor %}

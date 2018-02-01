@@ -1,0 +1,5 @@
+{% macro meta_tag(property, content, defaultContent=None) -%}
+  {% if content or defaultContent %}
+    <meta property='{{ property }}' content='{{ content or defaultContent }}'>
+  {% endif %}
+{%- endmacro %}
