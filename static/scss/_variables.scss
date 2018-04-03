@@ -56,7 +56,9 @@ $error-dark: #b71c1c !default;
 // Fonts
 ////////////////////////////////////////////////////////////////////////////////
 
-$primary-font: sans-serif !default;
+$path-to-font-files: "../fonts" !default;
+
+$primary-font: "Source Sans Pro", Arial, sans-serif !default;
 $secondary-font: serif !default;
 $monospace-font: monospace !default;
 
