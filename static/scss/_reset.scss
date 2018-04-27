@@ -135,6 +135,12 @@ table
 
 /* Normalize inline content (opinionated) */
 
+i,
+em
+{
+  font-style: italic;
+}
+
 b,
 strong
 {
