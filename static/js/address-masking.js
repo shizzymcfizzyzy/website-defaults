@@ -19,8 +19,12 @@ var ADDRESS_MASKING_DELAY = 250;
 
 function unmaskAddress(target)
 {
-  target.href = atob(target.getAttribute("data-address"));
-  target.removeAttribute("data-address");
+  var attributes = JSON.parse(target.getAttribute("data-mask"));
+
+  for (var attr in attributes)
+    target[attr] = atob(attributes[attr]);
+
+  target.removeAttribute("data-mask");
 }
 
 document.addEventListener("DOMContentLoaded", function()
@@ -31,5 +35,5 @@ document.addEventListener("DOMContentLoaded", function()
     ADDRESS_MASKING_DELAY
   );
 
-  document.querySelectorAll("[data-address]").forEach(unmaskAddress);
+  document.querySelectorAll("[data-mask]").forEach(unmaskAddress);
 });

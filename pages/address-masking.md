@@ -17,28 +17,38 @@ Include the following script at the bottom of a page:
 
 ### Step 2: Base64 encode addresses
 
-Base64 encode sensitive `href` addresses into `data-address` attributes.
+Base64 encode sensitive `href` addresses into `data-mask` attributes.
 
 #### Markdown (before processing)
 
 ```
-[Private Email](#){: data-address="bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t" }
+[Private Email](#){: data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t" }'
+
+[Email](#){: data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t", "textContent": "dXNlcm5hbWVAZXhhbXBsZS5jb20=" }'
 ```
+
+Note that you are required to use single quotes `'` for the `data-mask` attribute and double quotes `"` for the keys and values in the object.
 
 #### HTML (before processing)
 
 ```
-<a data-address="bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t">Private Email</a>
+<a data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t" }'>Private Email</a>
+
+<a data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t", "textContent": "dXNlcm5hbWVAZXhhbXBsZS5jb20=" }'>Email</a>
 ```
 
 #### Output (after processing)
 
 ```
 <a href="mailto:username@example.com">Private Email</a>
+
+<a href="mailto:username@example.com">username@example.com</a>
 ```
 
 ## Example
 
 <script src="/js/address-masking.js"></script>
 
-<a data-address="bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t">Private Email</a>
+<a data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t" }'>Private Email</a>
+
+<a data-mask='{ "href": "bWFpbHRvOnVzZXJuYW1lQGV4YW1wbGUuY29t", "textContent": "dXNlcm5hbWVAZXhhbXBsZS5jb20=" }'>Email</a>
