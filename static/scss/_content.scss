@@ -120,14 +120,29 @@
   ol,
   ul
   {
-    padding-left: 1.5em;
+    padding-left: 1em;
   }
 
   [dir="rtl"] ol,
   [dir="rtl"] ul
   {
-    padding-right: 2em;
-    padding-left: 0em;
+    padding-right: 1em;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width)
+  {
+    ol,
+    ul
+    {
+      padding-left: 1.5em;
+    }
+
+    [dir="rtl"] ol,
+    [dir="rtl"] ul
+    {
+      padding-right: 1.5em;
+    }
   }
 
   ol
