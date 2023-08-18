@@ -1,15 +1,1 @@
-{
-  "name": "website-defaults",
-  "description": "Default resources for eyeo websites",
-  "version": "2.0.0",
-  "license": "GPL-3.0",
-  "contributors": [
-    "Julian Doucette <j.doucette@eyeo.com>",
-    "Manvel Saroyan <m.saroyan@eyeo.com>",
-    "Ire Aderinokun <i.aderinokun@eyeo.com>"
-  ],
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
-  }
-}
+void
